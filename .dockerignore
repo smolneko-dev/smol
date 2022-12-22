@@ -1,0 +1,17 @@
+.gitignore
+.env
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+dist
+.DS_Store
+.vscode
+.idea
+.wakatime-project
+README.md
+.dockerignore
+Dockerfile
+.git
