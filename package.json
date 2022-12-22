@@ -1,0 +1,51 @@
+{
+  "name": "smolneko",
+  "version": "0.1.0",
+  "author": "Vasily Yenin <vasily.yenin@gmail.com> (https://github.com/ivas1ly)",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smolneko-team/smol.git"
+  },
+  "homepage": "https://smolneko.moe",
+  "scripts": {
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "dev": "nuxt dev",
+    "analyze": "nuxt analyze",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@headlessui/vue": "^1.7.7",
+    "@heroicons/vue": "^2.0.13",
+    "@nuxtjs/tailwindcss": "^6.2.0",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "@vueuse/components": "^9.8.2",
+    "@vueuse/core": "^9.8.2",
+    "@vueuse/motion": "2.0.0-beta.25",
+    "@vueuse/nuxt": "^9.8.2",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.30.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.8.0",
+    "nuxt": "3.0.0",
+    "postcss": "^8.4.20",
+    "prettier": "^2.8.1",
+    "prettier-plugin-organize-imports": "^3.2.1",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "swiper": "^8.4.5",
+    "typescript": "^4.9.4",
+    "vue": "^3.2.45",
+    "vue-eslint-parser": "^9.1.0",
+    "webpack": "^5.75.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.45",
+    "webpack": "^5.75.0"
+  }
+}
