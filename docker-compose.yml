@@ -2,14 +2,13 @@ version: '3'
 
 services:
   smol:
-    build: .
-    container_name: smol
-    image: smol
     environment:
-      - NODE_ENV=production
       - PORT=3000
       - NUXT_PUBLIC_API_URL=https://api.example.com
       - NUXT_PUBLIC_APP_URL=https://example.com
+    build: .
+    container_name: smol
+    image: smol
     ports:
       - "3130:3000"
     restart: unless-stopped

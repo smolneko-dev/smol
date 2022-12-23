@@ -11,6 +11,10 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+ENV PORT=3000
+ENV NUXT_PUBLIC_APP_URL=
+ENV NUXT_PUBLIC_API_URL=
+
 RUN corepack enable && corepack prepare pnpm@latest --activate
 RUN pnpm run build
 
