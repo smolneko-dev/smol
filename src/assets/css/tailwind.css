@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Open Sans";
+    src: local("Open Sans"), local("Open-Sans"),
+      url("~/assets/fonts/OpenSans-VariableFont.woff2")
+        format("woff2-variations"),
+      url("~/assets/fonts/OpenSans-VariableFont.woff2")
+        format("woff2 supports variations");
+    font-weight: 300 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+
+    /* To remove the blue highlight that appears over a link while it's being tapped.
+    https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color */
+    -webkit-tap-highlight-color: transparent;
+  }
+}

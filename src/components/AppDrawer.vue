@@ -52,20 +52,22 @@ function menuItemClicked() {
       <div
         @click="sidebarButtonClick"
         :style="[isOpen ? '' : 'display: none;']"
-        class="fixed left-0 top-0 z-20 h-screen w-full bg-[#14142b] opacity-[0.45] transition-opacity duration-[250ms] ease-in-out lg:hidden lg:h-full"
+        class="bg-smol-header fixed left-0 top-0 z-20 h-screen w-full opacity-[0.45] transition-opacity duration-[250ms] ease-in-out lg:hidden lg:h-full"
       ></div>
       <div
         :style="[isOpen ? '' : 'margin-left: -16rem;']"
-        class="min-w-64 fixed left-0 top-0 z-30 ml-0 h-screen w-64 flex-grow border-r border-gray-200 bg-white transition-[margin-left] duration-[250ms] ease-in-out md:h-full lg:static lg:h-auto"
+        class="min-w-64 dark:bg-smol-dark-body-bg bg-smol-body-bg fixed left-0 top-0 z-30 ml-0 h-screen w-64 flex-grow border-r border-r-[#D9DBE9] transition-[margin-left] duration-[250ms] ease-in-out dark:border-r-[#4E4B66] md:h-full lg:static lg:h-auto"
       >
         <div
           class="flex h-screen flex-col overflow-y-auto overscroll-contain lg:sticky lg:top-0"
         >
           <div
-            class="mx-4 mr-2 flex flex-shrink-0 items-center py-2 text-[#14142B]"
+            class="text-smol-header dark:text-smol-dark-header mx-4 mr-2 flex flex-shrink-0 items-center py-2"
           >
             <NuxtLink to="/figures" class="flex-shrink-0" :no-prefetch="true">
-              <IconsIconPaw class="mr-3 inline-flex h-10" />
+              <IconsIconPaw
+                class="fill-smol-header dark:fill-smol-dark-header mr-3 inline-flex h-10"
+              />
               <span
                 class="inline-flex select-none align-middle text-2xl font-bold"
               >
@@ -75,8 +77,8 @@ function menuItemClicked() {
 
             <button
               @click="sidebarButtonClick"
-              class="invisible ml-auto flex h-10 w-10 cursor-pointer select-none items-center justify-center rounded-full text-[#4E4B66] transition-colors duration-200 hover:bg-[#EFF0F6] hover:text-[#5F2EEA] active:bg-[#E4DAFF] lg:visible"
-              aria-label="Open drawer"
+              class="hover:text-smol-primary dark:hover:text-smol-dark-primary text-smol-text dark:text-smol-dark-text invisible ml-auto flex h-10 w-10 cursor-pointer select-none items-center justify-center rounded-full transition-colors duration-200 hover:bg-[#EFF0F6] active:bg-[#EBECFE] dark:hover:bg-[#14142B] dark:active:bg-[#4E4B66] lg:visible"
+              aria-label="Close drawer"
             >
               <span class="sr-only">Close drawer</span>
               <ChevronDoubleLeftIcon class="mr-1 h-6 w-6" />
@@ -96,8 +98,8 @@ function menuItemClicked() {
               <div
                 :class="[
                   isActive
-                    ? 'bg-[#EFF0F6] text-[#5F2EEA] hover:bg-[#E4DAFF] hover:text-[#2A00A2]'
-                    : 'text-[#4E4B66] transition-colors duration-200 hover:bg-[#EFF0F6] hover:text-[#5F2EEA] active:bg-[#E4DAFF]',
+                    ? 'text-smol-primary dark:text-smol-dark-primary bg-[#EFF0F6] hover:bg-[#EBECFE] dark:bg-[#14142B] dark:hover:bg-[#4E4B66]'
+                    : 'dark:hover:text-smol-dark-primary hover:text-smol-primary text-smol-text dark:text-smol-dark-text hover:bg-smol-input transition-colors duration-200 active:bg-[#EBECFE] dark:hover:bg-[#14142B] dark:active:bg-[#4E4B66]',
                 ]"
                 class="group flex w-full items-center rounded-md px-4 py-2 text-base lg:text-lg"
               >

@@ -19,6 +19,6 @@ export default <RouterConfig>{
       return { top: 0, behavior: "auto" };
     }
 
-    return { top: 0, behavior: "smooth" };
+    return { top: 0, behavior: "auto" };
   },
 };

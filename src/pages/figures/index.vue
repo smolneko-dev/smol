@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import {
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  BarsArrowDownIcon,
-} from "@heroicons/vue/24/outline";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/vue/24/outline";
 import { Figure } from "~/api/models/Figure";
 const config = useRuntimeConfig();
 const router = useRouter();
@@ -57,11 +53,10 @@ function fetchNextPage() {
     cursor.value = res.value?.next_cursor as string;
   } else return;
 
-  router.replace({
+  router.push({
     path: "figures",
     query: { cursor: cursor.value },
   });
-  setTimeout(() => refresh(), 300);
 }
 
 function fetchPrevPage() {
@@ -72,12 +67,34 @@ function fetchPrevPage() {
     cursor.value = res.value?.previous_cursor as string;
   } else return;
 
-  router.replace({
+  router.push({
     path: "figures",
     query: { cursor: cursor.value },
   });
+}
+
+function fetchPage() {
+  if (cursor.value != "") {
+    router.push({
+      path: "figures",
+      query: { cursor: cursor.value },
+    });
+  } else {
+    router.push({
+      path: "figures",
+    });
+  }
   setTimeout(() => refresh(), 300);
 }
+
+watch(
+  () => route.query,
+  (slug) => {
+    console.log("Changed!", route.query, cursor.value, slug);
+    cursor.value = (slug.cursor as string) || "";
+    fetchPage();
+  }
+);
 
 useHead({
   title: "Figures",
@@ -92,17 +109,19 @@ useHead({
 </script>
 
 <template>
-  <div class="container mx-auto mb-8 w-full max-w-screen-2xl px-4 md:px-8">
+  <div
+    class="@container/imgrid container mx-auto mb-8 w-full max-w-screen-2xl px-4 md:px-8"
+  >
     <div class="mb-4 mt-2 flex md:mb-6">
       <h2
-        class="text-4xl font-bold !leading-tight text-[#14142B] md:text-[48px] lg:text-6xl 2xl:text-[64px]"
+        class="text-smol-header dark:text-smol-dark-header text-4xl font-bold !leading-tight md:text-[48px] lg:text-6xl 2xl:text-[64px]"
       >
         Figures
       </h2>
     </div>
 
     <div
-      class="mb-6 grid gap-x-4 gap-y-6 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4"
+      class="@2xl/imgrid:!grid-cols-2 @4xl/imgrid:!grid-cols-3 @7xl/imgrid:!grid-cols-4 mb-8 grid gap-6 sm:grid-cols-2 md:gap-y-8 md:gap-x-8 lg:grid-cols-3 xl:grid-cols-4"
     >
       <LazyFiguresListItem
         v-for="figure in res?.data"
@@ -114,7 +133,7 @@ useHead({
       />
     </div>
 
-    <div class="grid grid-cols-4 gap-x-4 sm:gap-x-6">
+    <div class="grid grid-cols-4 gap-x-6 md:gap-x-8">
       <div class="col-start-2 justify-self-end">
         <button
           v-show="res?.previous_cursor"
@@ -137,16 +156,6 @@ useHead({
         >
           Next
           <ArrowRightIcon class="ml-4 h-6 w-6" />
-        </button>
-      </div>
-      <div class="col-start-4 justify-self-end">
-        <button
-          :disabled="true"
-          title="Infinite scroll is not yet available. Stay tuned :)"
-          class="col-start-3 hidden cursor-pointer items-center justify-center rounded-md border border-[#5F2EEA] py-2 px-4 text-[#5F2EEA] outline-none hover:bg-[#5F2EEA] hover:text-white focus:outline-none active:border-[#2A00A2] active:bg-[#2A00A2] active:text-white disabled:border-gray-300 disabled:text-gray-400 disabled:hover:bg-gray-100 sm:inline-flex lg:visible"
-        >
-          Enable&nbsp;&infin;&nbsp;scroll
-          <BarsArrowDownIcon class="ml-2 h-6 w-6" />
         </button>
       </div>
     </div>

@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     shim: false,
+    typeCheck: true,
   },
   debug: process.env.NODE_ENV === "development" ? true : false,
   srcDir: "src/",
@@ -14,8 +15,8 @@ export default defineNuxtConfig({
     buildAssetsDir: "/_smolneko/",
     pageTransition: { name: "fade", mode: "out-in" },
     head: {
-      meta: [{ name: "theme-color", content: "#5F2EEA" }],
-      link: [{ type: "image/svg+xml", rel: "icon", href: "/favicon.svg" }],
+      meta: [{ name: "theme-color", content: "#610BEF" }],
+      link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
     },
   },
   runtimeConfig: {
@@ -24,7 +25,13 @@ export default defineNuxtConfig({
       appURL: process.env.NUXT_PUBLIC_APP_URL,
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt", "@vueuse/motion/nuxt"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@vueuse/nuxt",
+    "@vueuse/motion/nuxt",
+    "@nuxtjs/color-mode",
+    // "nuxt-security",
+  ],
   css: ["~/assets/css/tailwind.css"],
   postcss: {
     plugins: {
@@ -32,4 +39,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  tailwindcss: {
+    viewer: true,
+    cssPath: "~/assets/css/tailwind.css",
+    configPath: "~~/tailwind.config.ts",
+  },
+  colorMode: {
+    classSuffix: "",
+  },
+  // security: {
+  // }
 });
