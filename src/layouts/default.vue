@@ -39,22 +39,10 @@ function toggleMenu() {
 </script>
 
 <template>
-  <div class="flex">
+  <div class="flex min-w-0">
     <AppDrawer :is-open="isOpen" @sidebar-clicked="toggleMenu" />
     <AppNavigation :is-open="isOpen" @sidebar-clicked="toggleMenu">
       <slot />
     </AppNavigation>
   </div>
 </template>
-
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s, transform 0.3s;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(20px);
-}
-</style>

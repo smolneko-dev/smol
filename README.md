@@ -10,17 +10,18 @@ smolneko is in active development, sometimes there may be bugs and errors. If yo
 
 ## Roadmap
 
-- About features and libraries
-- Add terms and privacy policy
-- Custom styles (extending the default tailwind theme)
-- Characters pages
-- Filters
-- Infinite scroll on pages with pagination
-- Search bar (global and full text)
-- Auth for users
-- Users pages
-- Blogs
-- Comments system
+- [x] ~~Dark mode~~
+- [ ] About features and libraries
+- [ ] Add terms and privacy policy
+- [ ] Custom styles (extending the default tailwind theme)
+- [ ] Characters pages
+- [ ] Filters
+- [ ] Infinite scroll on pages with pagination
+- [ ] Search bar (global and full text)
+- [ ] Auth for users
+- [ ] Users pages
+- [ ] Blogs
+- [ ] Comments system
 
 ## Setup
 
@@ -82,5 +83,6 @@ pnpm run analyze
 
 ## License
 
-© smolneko 2022
+© smolneko 2022-2023
+
 Licensed under the [MIT License](https://github.com/smolneko-team/smol/blob/main/LICENSE).
