@@ -14,6 +14,8 @@ defineProps<{
   images?: Image[];
   alt: string;
 }>();
+
+const loaded = ref(false);
 </script>
 
 <template>
@@ -37,14 +39,20 @@ defineProps<{
     <swiper-slide
       v-for="(image, index) in images"
       :key="index"
-      :class="[width >= 640 ? 'min-h-[24rem] !w-auto min-w-[16rem] sm:min-h-[28rem] md:min-h-[32rem]' : '!flex min-h-[24rem] !w-full items-center justify-center sm:min-h-[28rem] md:min-h-[32rem]']"
+      :class="[
+        width >= 640
+          ? 'min-h-[24rem] !w-auto min-w-[16rem] sm:min-h-[28rem] md:min-h-[32rem]'
+          : '!flex min-h-[24rem] !w-full items-center justify-center sm:min-h-[28rem] md:min-h-[32rem]',
+      ]"
     >
       <img
+        v-show="loaded"
         :src="image.url"
         :alt="alt"
         class="text-smol-text dark:text-smol-dark-text rounded-lg object-cover object-top sm:max-h-[28rem] md:max-h-[32rem]"
         :class="[width >= 640 ? '' : 'h-auto max-h-[24rem] w-auto']"
         loading="lazy"
+        @load="loaded = true"
       />
       <div
         class="swiper-lazy-preloader !border-smol-primary dark:!border-smol-dark-primary !border-t-transparent dark:!border-t-transparent"
