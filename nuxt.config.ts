@@ -46,6 +46,7 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: "",
+    storageKey: "smolneko-color-mode",
   },
   // security: {
   // }
