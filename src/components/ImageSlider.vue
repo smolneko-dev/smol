@@ -37,14 +37,17 @@ defineProps<{
     <swiper-slide
       v-for="(image, index) in images"
       :key="index"
-      :class="[width >= 640 ? '!w-auto' : 'flex !w-full justify-center']"
+      :class="[width >= 640 ? 'min-h-[24rem] !w-auto min-w-[16rem] sm:min-h-[28rem] md:min-h-[32rem]' : '!flex min-h-[24rem] !w-full items-center justify-center sm:min-h-[28rem] md:min-h-[32rem]']"
     >
       <img
         :src="image.url"
         :alt="alt"
-        loading="lazy"
         class="text-smol-text dark:text-smol-dark-text rounded-lg object-cover object-top sm:max-h-[28rem] md:max-h-[32rem]"
         :class="[width >= 640 ? '' : 'h-auto max-h-[24rem] w-auto']"
+        loading="lazy"
+      />
+      <div
+        class="swiper-lazy-preloader !border-smol-primary dark:!border-smol-dark-primary !border-t-transparent dark:!border-t-transparent"
       />
     </swiper-slide>
   </Swiper>
@@ -80,7 +83,7 @@ defineProps<{
 
 .swiper-button-prev,
 .swiper-button-next {
-  top: calc(50% - 2.5rem);
+  top: calc(50% - 1.5rem);
   height: 2.75rem !important;
   width: 2.75rem !important;
   border-radius: 9999px;
