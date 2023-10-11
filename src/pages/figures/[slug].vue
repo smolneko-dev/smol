@@ -46,7 +46,7 @@ if (!data.value?.data) {
 const figure = data.value?.data;
 
 interface ImagesResponse {
-  count: Number;
+  count: number;
   data: Image[];
 }
 

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { A11y, Keyboard, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/a11y";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { A11y, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Image } from "~/api/models/Image";
 const modules = [Navigation, Pagination, A11y, Keyboard];
@@ -19,7 +19,7 @@ const loaded = ref(false);
 </script>
 
 <template>
-  <Swiper
+  <swiper
     :modules="modules"
     :slides-per-view="width >= 640 ? 'auto' : 1"
     :space-between="24"
@@ -58,7 +58,7 @@ const loaded = ref(false);
         class="swiper-lazy-preloader !border-smol-primary dark:!border-smol-dark-primary !border-t-transparent dark:!border-t-transparent"
       />
     </swiper-slide>
-  </Swiper>
+  </swiper>
 </template>
 
 <style>
