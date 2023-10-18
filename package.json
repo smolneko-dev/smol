@@ -6,7 +6,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/smolneko-team/smol.git"
+    "url": "https://github.com/smolneko-dev/smol.git"
   },
   "homepage": "https://smolneko.moe",
   "scripts": {

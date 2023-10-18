@@ -100,7 +100,7 @@ useHead({
         <div class="mt-2 flex flex-wrap gap-4">
           <NuxtLink
             class="text-smol-body-bg dark:text-smol-dark-body-bg bg-smol-primary dark:bg-smol-dark-primary inline-flex cursor-pointer items-center rounded-md py-3 px-6 outline-none hover:bg-[#4700AB] focus:outline-none dark:hover:bg-[#BFBEFC]"
-            to="https://github.com/smolneko-team"
+            to="https://github.com/smolneko-dev"
             target="_blank"
             :external="true"
           >
@@ -154,7 +154,7 @@ useHead({
           <DisclosureStyled title="Open Source libraries"
             >A complete list of used libraries can be found in the
             <NuxtLink
-              to="https://github.com/smolneko-team"
+              to="https://github.com/smolneko-dev"
               target="_blank"
               :external="true"
               class="hover:text-smol-primary font-semibold hover:underline hover:underline-offset-4"

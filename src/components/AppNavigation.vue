@@ -69,7 +69,7 @@ const toggleColorMode = () =>
         <div class="flex items-center space-x-4">
           <NuxtLink
             class="text-smol-error hover:text-smol-error-strong dark:text-smol-dark-error hidden select-none items-center focus:outline-none dark:hover:text-[#FFABE8] sm:inline-flex"
-            to="https://github.com/smolneko-team/smol/issues"
+            to="https://github.com/smolneko-dev/smol/issues"
             :external="true"
             :no-prefetch="true"
             target="_blank"

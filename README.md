@@ -1,12 +1,12 @@
 # smol 🌸
 
-[![License](https://img.shields.io/github/license/smolneko-team/smolneko?color=%235f2eea)](https://github.com/smolneko-team/smol/blob/main/LICENSE) ![Website](https://img.shields.io/website?down_message=maintenance&up_message=up&url=http%3A%2F%2Fsmolneko.moe) ![GitHub package.json version](https://img.shields.io/github/package-json/v/smolneko-team/smol?color=%235f2eea) ![GitHub issues](https://img.shields.io/github/issues-raw/smolneko-team/smol?color=%235f2eea) ![GitHub repo size](https://img.shields.io/github/repo-size/smolneko-team/smol?color=%235f2eea) ![Lines of code](https://img.shields.io/tokei/lines/github/smolneko-team/smol?color=%235f2eea)
+[![License](https://img.shields.io/github/license/smolneko-dev/smolneko?color=%235f2eea)](https://github.com/smolneko-dev/smol/blob/main/LICENSE) ![Website](https://img.shields.io/website?down_message=maintenance&up_message=up&url=http%3A%2F%2Fsmolneko.moe) ![GitHub package.json version](https://img.shields.io/github/package-json/v/smolneko-dev/smol?color=%235f2eea) ![GitHub issues](https://img.shields.io/github/issues-raw/smolneko-dev/smol?color=%235f2eea) ![GitHub repo size](https://img.shields.io/github/repo-size/smolneko-dev/smol?color=%235f2eea) ![Lines of code](https://img.shields.io/tokei/lines/github/smolneko-dev/smol?color=%235f2eea)
 
 **[smolneko](https://smolneko.moe)** is a fully open source project about anime figures. This is the **web app**.
 
-The application is built with the [Nuxt 3](https://nuxt.com/) and [Tailwind CSS](https://tailwindcss.com/). API (backend) can be found [here](https://github.com/smolneko-team/smolneko).
+The application is built with the [Nuxt 3](https://nuxt.com/) and [Tailwind CSS](https://tailwindcss.com/). API (backend) can be found [here](https://github.com/smolneko-dev/smolneko).
 
-smolneko is in active development, sometimes there may be bugs and errors. If you find a bug or an error, please [create a new issue](https://github.com/smolneko-team/smol/issues/new). Any help would be helpful and appreciated.
+smolneko is in active development, sometimes there may be bugs and errors. If you find a bug or an error, please [create a new issue](https://github.com/smolneko-dev/smol/issues/new). Any help would be helpful and appreciated.
 
 ## Roadmap
 
@@ -83,6 +83,4 @@ pnpm run analyze
 
 ## License
 
-© smolneko 2022-2023
-
-Licensed under the [MIT License](https://github.com/smolneko-team/smol/blob/main/LICENSE).
+[MIT License](https://github.com/smolneko-dev/smol/blob/main/LICENSE).
