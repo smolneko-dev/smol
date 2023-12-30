@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/vue/24/outline";
-import { Figure } from "~/api/models/Figure";
+import { type Figure } from "~/api/models/Figure";
 const config = useRuntimeConfig();
 const router = useRouter();
 const route = useRoute();

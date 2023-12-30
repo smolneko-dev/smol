@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useDateFormat } from "@vueuse/core";
-import { Figure } from "~/api/models/Figure";
-import { Image } from "~/api/models/Image";
+import { type Figure } from "~/api/models/Figure";
+import { type Image } from "~/api/models/Image";
 
 definePageMeta({
   validate: async (route) => {
@@ -39,7 +39,7 @@ if (error.value?.name === "FetchError" && error.value?.statusCode !== 500) {
 if (!data.value?.data) {
   throw showError({
     statusCode: 404,
-    statusMessage: "The figure you are looking for does not exist.",
+    statusMessage: "The figure you are looking for does not exist",
   });
 }
 

@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { A11y, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Image } from "~/api/models/Image";
+import { type Image } from "~/api/models/Image";
 const modules = [Navigation, Pagination, A11y, Keyboard];
 
 const { width } = useWindowSize();
