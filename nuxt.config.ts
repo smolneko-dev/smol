@@ -30,7 +30,6 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@vueuse/motion/nuxt",
     "@nuxtjs/color-mode",
-    // "nuxt-security",
   ],
   css: ["~/assets/css/tailwind.css"],
   postcss: {
@@ -48,6 +47,4 @@ export default defineNuxtConfig({
     classSuffix: "",
     storageKey: "smolneko-color-mode",
   },
-  // security: {
-  // }
 });
