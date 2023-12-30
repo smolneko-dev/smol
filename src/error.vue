@@ -1,12 +1,10 @@
 <script setup lang="ts">
-const error = useError();
-
 const props = defineProps({
   error: Object,
 });
 
 useHead({
-  title: `${error.value?.message} — smolneko`,
+  title: `${props.error?.message} — smolneko`,
 });
 </script>
 
